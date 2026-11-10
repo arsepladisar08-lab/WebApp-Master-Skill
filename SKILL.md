@@ -3,7 +3,7 @@ name: webapp-master-skill
 description: Plan, design, implement, test, secure, review, and ship modern web applications. Use when creating a new WebApp, adding features, redesigning interfaces, debugging, auditing, or improving an existing web project. Routes work to focused modules and adapts to the repository's actual stack.
 license: MIT
 metadata:
-  version: "0.1.0"
+  version: "0.2.0"
   maintainer: "arsepladisar08-lab"
 ---
 
@@ -31,6 +31,7 @@ You are acting as a pragmatic product-minded software engineer and design-aware 
 | Add a feature | [workflows/feature-development.md](workflows/feature-development.md) | requirements, architecture, relevant implementation, tests |
 | Redesign or improve UI | [workflows/redesign.md](workflows/redesign.md) | frontend-design, design-system, responsive, accessibility |
 | Fix a bug | [workflows/bug-fixing.md](workflows/bug-fixing.md) | diagnosis, regression test, minimal fix, verification |
+| Run independent evaluation | [workflows/evaluator-loop.md](workflows/evaluator-loop.md) | evaluator protocol, feature contract, testing, code review |
 | Security or quality audit | [quality/release-gate.md](quality/release-gate.md) | security, testing, accessibility, performance |
 
 ## 3. Hard requirements
@@ -91,7 +92,7 @@ Do not create these documents for a tiny isolated fix unless they materially imp
 - Update documentation and tests with behavior changes.
 
 ### Phase E — Verify
-Use [quality/release-gate.md](quality/release-gate.md). Fix regressions introduced by the change. If checks cannot run, record the blocker and provide a manual verification path.
+Use [quality/release-gate.md](quality/release-gate.md). For feature work that warrants independent acceptance, use the [Generator–Evaluator loop](workflows/evaluator-loop.md). Fix regressions introduced by the change. If checks cannot run, record the blocker and provide a manual verification path.
 
 ### Phase F — Deliver
 Summarize:
@@ -113,11 +114,14 @@ A task is complete only when:
 
 ## 6. Specialist module index
 
+### Core
 - [Project discovery](core/project-discovery.md)
 - [Product planning](core/product-planning.md)
 - [Architecture](core/architecture.md)
 - [Module routing](core/module-routing.md)
 - [Execution workflow](core/execution-workflow.md)
+
+### Design and frontend
 - [Frontend design](design/frontend-design.md)
 - [Design system](design/design-system.md)
 - [Responsive design](design/responsive-design.md)
@@ -126,6 +130,8 @@ A task is complete only when:
 - [Component architecture](frontend/component-architecture.md)
 - [State and data fetching](frontend/state-data-fetching.md)
 - [Forms and validation](frontend/forms-validation.md)
+
+### Backend and quality
 - [API design](backend/api-design.md)
 - [Database design](backend/database-design.md)
 - [Authentication and authorization](backend/authentication-authorization.md)
@@ -135,5 +141,20 @@ A task is complete only when:
 - [Code review](quality/code-review.md)
 - [Performance and SEO](quality/performance-seo.md)
 - [Release gate](quality/release-gate.md)
+
+### Delivery, integrations and agents
 - [Vercel deployment](deployment/vercel.md)
 - [CI/CD](deployment/ci-cd.md)
+- [React + Vite + Supabase + Vercel profile](integrations/react-vite-supabase-vercel.md)
+- [Supabase RLS test matrix](integrations/supabase-rls-test-matrix.md)
+- [Evaluator protocol](agents/evaluator-protocol.md)
+- [Feature contract template](agents/feature-contract-template.md)
+- [Progress template](agents/progress-template.md)
+
+### Workflows
+- [New WebApp](workflows/new-webapp.md)
+- [Existing WebApp](workflows/existing-webapp.md)
+- [Feature development](workflows/feature-development.md)
+- [Redesign](workflows/redesign.md)
+- [Bug fixing](workflows/bug-fixing.md)
+- [Generator–Evaluator loop](workflows/evaluator-loop.md)
