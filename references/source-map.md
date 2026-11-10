@@ -15,6 +15,12 @@ This project selectively adapts ideas and workflow patterns from public reposito
 | [Elaya Design AI Design Skills](https://github.com/elayadesign/ai-design-skills) | Landing pages and Figma workflows | Conversion-aware design considerations |
 | [Addy Osmani Web Quality Skills](https://github.com/addyosmani/web-quality-skills) | Lighthouse and Web Vitals | Performance and quality measurement |
 
+## Integration status
+
+The table above describes design influences and intended references; it does not mean all upstream files have been imported, fully audited, or validated. The React/Vite/Supabase/Vercel module and evaluator workflow are locally authored integration guidance informed by the broader engineering patterns documented here.
+
+For specific upstream content integrations, record exact file, commit, inspection date, license and local adaptation in accordance with [upstream-integration-policy.md](upstream-integration-policy.md).
+
 ## Verification note
 
 Upstream repository structures, branches, content, versions and licenses can change. Before importing or citing a specific subskill:
@@ -23,5 +29,3 @@ Upstream repository structures, branches, content, versions and licenses can cha
 3. Prefer original concise guidance and links over copying large blocks.
 4. Preserve required notices and attribution.
 5. Re-check version-sensitive APIs against official product documentation.
-
-The source list identifies intended references; it is not a claim that every upstream file has been exhaustively audited or vendored into this repository.
