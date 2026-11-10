@@ -14,6 +14,9 @@ Load only the material needed for the current task. This reduces distraction and
 | API feature | api-design | database-design, security, testing-strategy |
 | Login / roles | authentication-authorization | security, database-design, browser-testing |
 | Database change | database-design | security, testing-strategy, deployment/ci-cd |
+| Supabase + React/Vite + Vercel | integrations/react-vite-supabase-vercel | supabase-rls-test-matrix, security, browser-testing |
+| Supabase RLS/policy change | integrations/supabase-rls-test-matrix | database-design, authentication-authorization, testing-strategy |
+| Independent feature acceptance | agents/evaluator-protocol | feature contract, browser-testing, code-review |
 | Bug fix | project-discovery | code-review + test module for affected layer |
 | Release | release-gate | performance-seo, vercel, ci-cd |
 
