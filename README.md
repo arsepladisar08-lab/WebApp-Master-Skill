@@ -1,6 +1,6 @@
 # WebApp Master Skill
 
-A modular, framework-aware skill system for planning, designing, implementing, testing, securing, and shipping production-minded web applications.
+A modular, framework-aware skill system for planning, designing, implementing, testing, securing, reviewing, and shipping production-minded web applications.
 
 **Default language:** English for agent instructions. Project-facing copy follows the user's requested language.
 
@@ -15,8 +15,10 @@ It does not prescribe one universal stack. The project brief, existing codebase,
 1. Read [SKILL.md](SKILL.md).
 2. For a new application, follow [workflows/new-webapp.md](workflows/new-webapp.md).
 3. For an existing codebase, follow [workflows/existing-webapp.md](workflows/existing-webapp.md).
-4. Load only the specialist modules needed for the current task. See [core/module-routing.md](core/module-routing.md).
-5. Verify work using [quality/release-gate.md](quality/release-gate.md).
+4. For React + Vite + Supabase + Vercel, load [the integration profile](integrations/react-vite-supabase-vercel.md).
+5. For independent acceptance, use [the Evaluator protocol](agents/evaluator-protocol.md).
+6. Load only the specialist modules needed for the current task. See [core/module-routing.md](core/module-routing.md).
+7. Verify work using [quality/release-gate.md](quality/release-gate.md).
 
 ## Repository map
 
@@ -26,15 +28,26 @@ It does not prescribe one universal stack. The project brief, existing codebase,
 ├── README.md
 ├── CHANGELOG.md
 ├── LICENSE
+├── agents/        # Planner, Generator, Evaluator and progress templates
 ├── core/          # Intake, planning, architecture, routing and execution
 ├── design/        # Visual direction, design systems, responsive and UX review
 ├── frontend/      # React, components, state, forms and frontend security
 ├── backend/       # APIs, data, auth and application security
 ├── quality/       # Testing, review, accessibility, performance and release gates
 ├── deployment/    # Vercel, CI/CD and production readiness
+├── integrations/  # Stack-specific implementation/security profiles
 ├── workflows/     # New app, existing app, feature, redesign and bug-fix flows
-└── references/    # Stack selection, evidence and source attribution
+└── references/    # Stack selection, source attribution and upstream policy
 ```
+
+## Version 0.2.0 highlights
+
+- React + Vite + Supabase + Vercel integration profile.
+- Supabase RLS test matrix for anonymous, ordinary, admin and service-role actors.
+- Generator–Evaluator separation with evidence-driven acceptance decisions.
+- Feature contract and persistent progress templates.
+- Upstream integration policy for source provenance, licenses and maintenance.
+- Expanded master routing for integrations and independent evaluation.
 
 ## Design principles
 
@@ -53,8 +66,8 @@ The main skill uses Markdown instructions and does not require one specific agen
 
 ## Sources and attribution
 
-See [references/source-map.md](references/source-map.md) for upstream repositories and the scope of adaptation. This project is an independent, selective synthesis—not a verbatim mirror of upstream skill packs. Refer to upstream licenses before copying any substantial text or code.
+See [references/source-map.md](references/source-map.md) and [references/upstream-integration-policy.md](references/upstream-integration-policy.md). This project is an independent, selective synthesis—not a verbatim mirror of upstream skill packs. Refer to upstream licenses before copying any substantial text or code.
 
-## Status
+## Validation status
 
-Initial foundation release. Specialist modules are intentionally concise and should be expanded through real project use, tests, and version-specific documentation review.
+Repository structure and internal links are checked during maintenance. Runtime validation must be performed in a real target WebApp; this repository alone is a skill and documentation package, not a runnable WebApp.
